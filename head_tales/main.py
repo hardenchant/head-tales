@@ -94,9 +94,13 @@ def check_k():
                 win_win += 1
         print(f"{choice}:{win_choice} - {win_cho / games}:{win_win / games}")
 
+def main():
+    # check_k()
+    n = 1000000000
+    tss = generate_k_random_toss(n)
+    print(tss.count('T') / n)
+    print(tss.count('H') / n)
 
-# check_k()
-n = 1000000000
-tss = generate_k_random_toss(n)
-print(tss.count('T') / n)
-print(tss.count('H') / n)
+
+if __name__ == '__main__':
+    main()
